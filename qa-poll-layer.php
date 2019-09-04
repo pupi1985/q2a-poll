@@ -155,7 +155,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 				if (count > 1) return true;
 			}
 			e.preventDefault();
-			alert("'.qa_lang('polls/choice_count_error').'");
+			alert("' . qa_lang('polls/choice_count_error') . '");
 			return false;
 		}
 	}
@@ -169,7 +169,7 @@ function pollVote(qid,uid,vid,cancel) {
 	var dataString = 'ajax_poll_id='+qid+'&ajax_poll_voter='+uid+'&ajax_poll_vote='+vid+(cancel?'&ajax_poll_cancel='+cancel:'');  
 	jQuery.ajax({  
 	  type: 'POST',  
-	  url: '".qa_self_html()."',  
+	  url: '" . qa_self_html() . "',
 	  data: dataString,  
 	  success: function(data) {
 		if(/^[\\t\\n ]*###/.exec(data)) {
@@ -397,3 +397,4 @@ function pollVote(qid,uid,vid,cancel) {
         );
         $this->poll = $this->poll - 10;
     }
+}

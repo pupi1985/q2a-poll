@@ -63,16 +63,16 @@
 	height:12px;
 	float:left;
 	margin-top: 1px;
-	background-image:url(^button_vote.png);
+	background-image:url(^public/img/button_vote.png);
 }
 .qa-poll-voted-button {
-	background-image:url(^button_voted.png);
+	background-image:url(^public/img/button_voted.png);
 }
 .qa-poll-vote-button {
-	background-image:url(^button_vote.png);
+	background-image:url(^public/img/button_vote.png);
 }
 .qa-poll-vote-button:hover, .qa-poll-voted-button:hover {
-	background-image:url(^button_voting.png);
+	background-image:url(^public/img/button_voting.png);
 }';
 		default:
 			return null;

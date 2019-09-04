@@ -2,7 +2,6 @@
 
 class qa_poll_page
 {
-
     function suggest_requests()
     { // for display in admin interface
         return array(

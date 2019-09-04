@@ -2,7 +2,7 @@
 	class qa_poll_admin {
 
 	function option_default($option) {
-		
+
 		switch($option) {
 		case 'permit_post_poll':
 			return QA_PERMIT_USERS;
@@ -10,8 +10,6 @@
 			return QA_PERMIT_USERS;
 		case 'poll_enable_subnav':
 			return true;
-
-
 		case 'poll_css':
 			return '#qa-poll-div {
 	background-color: #D9E3EA;
@@ -77,23 +75,23 @@
 	background-image:url(^button_voting.png);
 }';
 		default:
-			return null;				
+			return null;
 		}
-		
+
 	}
-		
+
 		function allow_template($template)
 		{
 			return ($template!='admin');
-		}	   
-			
+		}
+
 		function admin_form(&$qa_content)
-		{					   
-							
+		{
+
 		// Process form input
-			
+
 			$ok = null;
-			
+
 			if (qa_clicked('poll_save')) {
 				qa_db_query_sub(
 					'CREATE TABLE IF NOT EXISTS ^postmeta (
@@ -105,7 +103,7 @@
 					KEY post_id (post_id),
 					KEY meta_key (meta_key)
 					) ENGINE=MyISAM  DEFAULT CHARSET=utf8'
-				);			
+				);
 				qa_db_query_sub(
 					'CREATE TABLE IF NOT EXISTS ^polls (
 					id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -114,7 +112,7 @@
 					content varchar(255) DEFAULT \'\',
 					PRIMARY KEY (id)
 					) ENGINE=MyISAM  DEFAULT CHARSET=utf8'
-				);			
+				);
 				qa_opt('poll_enable',(bool)qa_post_text('poll_enable'));
 				qa_opt('poll_enable_subnav',(bool)qa_post_text('poll_enable_subnav'));
 				qa_opt('poll_votes_hide',(bool)qa_post_text('poll_votes_hide'));
@@ -132,11 +130,11 @@
 				}
 				$ok = qa_lang('admin/options_reset');
 			}
-  
+
 		// Create the form for display
-			
+
 			$fields = array();
-			
+
 			$fields[] = array(
 				'label' => 'Enable polls',
 				'tags' => 'NAME="poll_enable"',
@@ -181,11 +179,11 @@
 				'note' => '^ will be replaced by location of this plugin directory',
 			);
 
-			return array(		   
+			return array(
 				'ok' => ($ok && !isset($error)) ? $ok : null,
-					
+
 				'fields' => $fields,
-			 
+
 				'buttons' => array(
 					array(
 						'label' => qa_lang_html('main/save_button'),

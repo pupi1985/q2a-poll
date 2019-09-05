@@ -51,37 +51,3 @@ class qa_poll_event
         }
     }
 }
-
-/*
-
-					// buddypress integration
-						if (qa_opt('buddypress_integration_enable')) {
-
-							$parent = qa_db_single_select(qa_db_full_post_selectspec(null, $answer['parentid']));
-
-							require_once QA_INCLUDE_DIR.'qa-app-users.php';
-
-							$publictohandle=qa_get_public_from_userids(array($userid));
-							$handle=@$publictohandle[$userid];
-
-							$anchor = qa_anchor('A', $params['postid']);
-							$suffix = '<a href="'.qa_path_html(qa_q_request($parent['postid'], $parent['title']), null, qa_opt('site_url'),null,$anchor).'">'.$parent['title'].'</a>';
-
-							$activity_url = qa_path_html(qa_q_request($parent['postid'], $parent['title']), null, qa_opt('site_url'));
-
-							$action = '<a href="' . bp_core_get_user_domain($userid) . '" rel="nofollow">'.$handle.'</a> voted in the poll "'.$suffix.'"';
-
-							qa_buddypress_activity_post(
-								array(
-									'action' => $action,
-									'content' => null,
-									'primary_link' => $activity_url,
-									'component' => 'bp-qa',
-									'type' => 'activity_qa',
-									'user_id' => $userid,
-									'item_id' => null
-								)
-							);
-						}
-
-*/

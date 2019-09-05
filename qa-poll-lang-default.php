@@ -29,7 +29,6 @@ return array(
     'permit_vote_poll' => 'Vote on polls',
     'permit_close_poll' => 'Close any poll',
     'permit_delete_poll' => 'Delete any poll',
-    'permit_delete_poll' => 'Delete any poll',
 
     'reopen_poll' => 'Reopen',
     'reopen_poll_hover' => 'Reopen poll',
@@ -52,9 +51,4 @@ return array(
     'answers_text' => 'Choices:',
     'page_title' => 'Polls',
     'choice_count_error' => 'You must enter at least two choices for the poll.',
-
 );
-
-/*
-	Omit PHP closing tag to help avoid accidental output
-*/

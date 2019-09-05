@@ -27,8 +27,3 @@ function qa_get_request_content()
 
     return $qa_content;
 }
-/*
-		Omit PHP closing tag to help avoid accidental output
-*/
-
-

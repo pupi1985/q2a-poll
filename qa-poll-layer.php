@@ -2,10 +2,12 @@
 
 class qa_html_theme_layer extends qa_html_theme_base
 {
+    private $poll;
+
     function doctype()
     {
         qa_html_theme_base::doctype();
-        //qa_error_log($this->content);
+
         if (qa_post_text('poll_vote')) {
             return;
         }
@@ -71,6 +73,7 @@ class qa_html_theme_layer extends qa_html_theme_base
                     'is_poll'
                 )
             );
+            $poll = array();
             foreach ($poll_array as $q) {
                 $poll[(int)$q['post_id']] = $q['meta_value'];
             }
@@ -294,8 +297,6 @@ function pollVote(qid,uid,vid,cancel) {
         $out = '<div id="qa-poll-choices-title">' . qa_lang('polls/answers_text') . '</div><div id="qa-poll-choices">';
 
         // check if voted
-
-        $allow = true;
 
         $totalvotes = 0;
 

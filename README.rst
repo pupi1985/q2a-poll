@@ -1,5 +1,5 @@
 ===========================
-Question2Answer Poll 1.0b
+Question2Answer Poll
 ===========================
 -----------
 Description
@@ -30,7 +30,7 @@ Installation
 #. Get the source code for this plugin from github_, either using git_, or downloading directly:
 
    - To download using git, install git and then type 
-     ``git clone git://github.com/NoahY/q2a-poll.git poll``
+     ``git clone git://github.com/pupi1985/q2a-poll.git poll``
      at the command prompt (on Linux, Windows is a bit different)
    - To download directly, go to the `project page`_ and click **Download**
 
@@ -39,7 +39,7 @@ Installation
 .. _Question2Answer: http://www.question2answer.org/install.php
 .. _git: http://git-scm.com/
 .. _github:
-.. _project page: https://github.com/NoahY/q2a-poll
+.. _project page: https://github.com/pupi1985/q2a-poll
 
 ----------
 Disclaimer

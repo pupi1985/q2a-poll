@@ -36,8 +36,8 @@ Installation
 
 #. navigate to your site, go to **Admin -> Plugins** on your q2a install and select the '**Enable polls**' option, then '**Save**'.
 
-.. _Question2Answer: http://www.question2answer.org/install.php
-.. _git: http://git-scm.com/
+.. _Question2Answer: https://www.question2answer.org/install.php
+.. _git: https://git-scm.com/
 .. _github:
 .. _project page: https://github.com/pupi1985/q2a-poll
 
@@ -51,12 +51,12 @@ Release
 -------
 All code herein is Copylefted_.
 
-.. _Copylefted: http://en.wikipedia.org/wiki/Copyleft
+.. _Copylefted: https://en.wikipedia.org/wiki/Copyleft
 
 ---------
 About q2A
 ---------
 Question2Answer is a free and open source platform for Q&A sites. For more information, visit:
 
-http://www.question2answer.org/
+https://www.question2answer.org/
 

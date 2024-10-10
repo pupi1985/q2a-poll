@@ -242,7 +242,7 @@ function pollVote(qid,uid,vid,cancel) {
 
         if ($this->poll != 2) {
             foreach ($answers as $idx => $answer) {
-                $votes = explode(',', $answer['votes']);
+                $votes = explode(',', $answer['votes'] ?? '');
                 if (in_array($uid, $votes)) {
                     $voted = true;
                     break;
@@ -255,7 +255,7 @@ function pollVote(qid,uid,vid,cancel) {
         if ($vid && $uid && qa_permit_check('permit_vote_poll') && $this->poll < 9 && (qa_opt('poll_vote_change') || !$voted || $this->poll == 2)) { // not closed, note voted or can change vote
             $vid = (int)$vid;
             foreach ($answers as $idx => $answer) {
-                $votes = explode(',', $answer['votes']);
+                $votes = explode(',', $answer['votes'] ?? '');
 
                 if ($answer['id'] == $vid && !$cancel) {
 

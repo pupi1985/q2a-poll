@@ -98,7 +98,7 @@ class qa_poll_page
             count($questions), // total count
             qa_lang('polls/page_title'), // title if some questions
             $nonetitle, // title if no questions
-            null, // categories for navigation
+            [], // categories for navigation
             null, // selected category id
             false, // show question counts in category navigation
             null, // prefix for links in category navigation
